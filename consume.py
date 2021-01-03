@@ -2,7 +2,14 @@ import nsq
 import time
 
 
+def finish_con(message):
+    print(message)
+
+
 def handler(message):
+    message.enable_async()
+    message.on("finish", finish_con)
+
     print(message.id)
     print(message.body)
     # timestamp is a unix epoch with billionth precision
@@ -12,6 +19,7 @@ def handler(message):
             "%m/%d/%Y %H:%M:%S", time.gmtime(message.timestamp / 1000000000.0)
         )
     )
+    message.finish()
     return True
 
 
