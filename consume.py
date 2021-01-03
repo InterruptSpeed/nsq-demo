@@ -1,6 +1,6 @@
 import nsq
 import time
-
+import json
 
 # def finish_con(message):
 #    print(message)
@@ -12,6 +12,9 @@ def handler(message):
 
     print(message.id)
     print(message.body)
+
+    obj = json.loads(message.body)
+    print(obj["name"])
     # timestamp is a unix epoch with billionth precision
     print(message.timestamp)
     print(
