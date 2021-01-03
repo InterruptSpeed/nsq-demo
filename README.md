@@ -28,7 +28,7 @@ cd nsq-demo
 nsqadmin --lookupd-http-address=127.0.0.1:4161
 ```
 
-and then navigate to [127.0.0.1:4171](127.0.0.1:4171). NOTE: ensure your /etc/hosts file has an entry that resolves 127.0.0.1 to your hostname
+and then navigate to [127.0.0.1:4171](http://127.0.0.1:4171). NOTE: ensure your /etc/hosts file has an entry that resolves 127.0.0.1 to your hostname
 
 + in another terminal:
 
