@@ -8,6 +8,7 @@ having a play with [nsq](https://nsq.io)
 + in a terminal window:
 
 ```
+pip3 install -r requirements.txt
 git clone https://github.com/InterruptSpeed/nsq-demo
 cd nsq-demo
 nsqd
