@@ -2,13 +2,13 @@ import nsq
 import time
 
 
-def finish_con(message):
-    print(message)
+# def finish_con(message):
+#    print(message)
 
 
 def handler(message):
-    message.enable_async()
-    message.on("finish", finish_con)
+    # message.enable_async()
+    #message.on("finish", finish_con)
 
     print(message.id)
     print(message.body)
